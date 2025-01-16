@@ -18,7 +18,7 @@ Angular CLI (v15.2.10 or above)
 Install Dependencies
 To get started, clone the repository and install the required dependencies:
 
-git clone <repository-link>
+git clone [repository-link](https://github.com/Shaif-Alam/Entwickler-.git)
 cd e-cart
 npm install
 Running the Application Locally
@@ -39,9 +39,6 @@ Testing
 Unit Testing
 Unit tests have been implemented using Karma and Jasmine. To run unit tests, use:
 
-bash
-Copy
-Edit
 ng test
 This will run the unit tests in the browser and show the results in the console.
 
