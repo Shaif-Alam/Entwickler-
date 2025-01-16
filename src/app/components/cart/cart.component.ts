@@ -25,15 +25,15 @@ export class CartComponent implements OnInit {
   }
 
   removeFromCart(productId: number) {
-    // Remove the product from the cart service
+    
     this.cartService.removeFromCart(productId);
   
-    // Update the cart items array and total price
-    this.cartItems = this.cartService.getCartItems(); // Ensure the cart items are updated
-    this.totalPrice = this.cartService.getTotalPrice(); // Recalculate the total price
+ 
+    this.cartItems = this.cartService.getCartItems(); 
+    this.totalPrice = this.cartService.getTotalPrice(); 
   }
 
   goBack(): void {
-    this.location.back(); // Navigate back to the previous page
+    this.location.back(); 
   }
 }
