@@ -1,0 +1,94 @@
+.btn-bg{
+     background-color: #9C6E01;
+      color: rgb(255, 255, 255);
+     text-transform:uppercase;
+     letter-spacing: 5px;
+      padding: 10px 15px;
+      border-radius: 0%;
+      font-weight: 100;
+}
+.btn-bg:hover{
+     background-color: #000000;
+      color: rgb(255, 255, 255);
+      padding: 10px 15px;
+      border-radius: 0%;
+}
+
+.btn-light:hover{
+      color:  rgb(0, 0, 0);
+      background-color: #F99C4B;
+
+}
+.btn-light{
+      color:  rgb(0, 0, 0);
+      background-color: #F99C4B;
+      border-radius: 0%;
+      padding: 10px 20px;
+}
+
+
+.price{
+     text-transform: uppercase;
+     font-weight: 500;
+}
+
+.amount{
+     text-transform:capitalize;
+      font-weight: 400;
+      color: black;
+}
+
+.text-one{
+     color: black;
+      /* font-weight: 200; */
+}
+
+.text-name{
+     color:  black;
+      text-transform: capitalize;
+       font-size: 16px;
+}
+
+.btn-remove{
+background-color: #DC3545;
+color:  whitesmoke;
+ border-radius: 0%;
+  padding: 8px 10px;
+
+}
+
+.input-quant{
+    outline: none;
+    border: none;
+    outline: none;
+    height: 34px;
+    box-shadow: none;
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+/* 
+*{
+    background-color: #F1F3F6;
+    height: 100vh;
+} */
+
+.text-details{
+     color: black;
+      text-transform: capitalize;
+      font-weight: 300;
+       font-size: 16px;
+}
+
+
+.bg-background-bg{
+     background-color: #F2F2F2;
+}
+
+@media (max-width: 768px) {
+    .img_one {
+      height: auto !important;
+      width: auto !important;
+    }
+  }
+  

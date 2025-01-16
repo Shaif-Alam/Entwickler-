@@ -1,0 +1,127 @@
+/* product-list.component.css */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  display: inline-block;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+}
+
+.product-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #45a049;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+mat-icon:hover {
+  color: rgb(21, 96, 14);
+}
+
+.input-box {
+  outline: none;
+  border: none;
+  outline: none;
+  height: 34px;
+  box-shadow: none;
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 1rem;
+
+
+}
+
+.btn-cart {
+  color: rgb(23, 23, 23);
+  border-radius: 0%;
+  padding: 8px 20px;
+   font-size: 16px;
+  text-transform:capitalize;
+  border-color: #ccc;
+}
+.btn-cart:hover{
+ background-color: #0b0b0b;
+ color: white;
+}
+
+.bg-background:hover {
+  background-color:rgb(243,243,243); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+.pagination button:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+.pagination button i {
+  font-size: 18px; /* Adjust the icon size */
+}
+
+.pagination button:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.drop-down {
+  width: 100%; 
+  max-width: 300px; 
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius:0%;
+  background-color: #fff; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+   outline: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .img_one {
+    height: 200px !important;
+    width: 200px !important;
+    display: block;
+    margin: 0 auto; 
+  }
+}

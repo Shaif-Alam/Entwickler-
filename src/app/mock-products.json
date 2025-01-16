@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "price": 599,
+      "category": "Electronics",
+      "description": "Latest model with advanced features.",
+        "image": "assets/cloth/a.jpg"
+    },
+    {
+      "id": 2,
+      "name": "T-Shirt",
+      "price": 25,
+      "category": "Clothing",
+      "description": "Comfortable cotton T-shirt.",
+     "image": "assets/cloth/a.jpg"
+  
+   
+    }
+  ]
+  
