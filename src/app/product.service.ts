@@ -37,7 +37,7 @@ export class ProductService {
       price: 250,
       category: 'Electronics',
       description: 'Track your fitness and stay connected on the go.',
-      image: 'assets/electronic/d.jpg',
+      image: 'assets/cloth/i.jpg',
     },
     {
       id: 5,
