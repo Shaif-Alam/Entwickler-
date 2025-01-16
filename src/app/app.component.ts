@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  searchQuery: string = ''; // Store the search query
+  searchQuery: string = ''; 
 
   onSearchQueryChanged(query: string): void {
-    this.searchQuery = query; // Update search query in parent component
+    this.searchQuery = query; 
   }
 }

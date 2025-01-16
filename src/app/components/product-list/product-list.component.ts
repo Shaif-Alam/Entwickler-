@@ -33,18 +33,18 @@ export class ProductListComponent implements OnInit {
       product.name.toLowerCase().includes(this.searchQuery.toLowerCase()) &&
       (this.selectedCategory === '' || product.category === this.selectedCategory)
     );
-    this.totalPages = Math.ceil(this.filteredProducts.length / this.pageSize); // Recalculate total pages after filtering
-    this.currentPage = 1; // Reset to the first page after filtering
+    this.totalPages = Math.ceil(this.filteredProducts.length / this.pageSize); 
+    this.currentPage = 1; 
   }
 
-  // Get the products to display on the current page
+  
   getPagedProducts() {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
     return this.filteredProducts.slice(startIndex, endIndex);
   }
 
-  // Change to a specific page
+
   changePage(page: number) {
     if (page > 0 && page <= this.totalPages) {
       this.currentPage = page;
@@ -55,13 +55,13 @@ export class ProductListComponent implements OnInit {
     this.cartService.addToCart(product);
   
     this._snackBar.open(
-      `${product.name} has been added to the cart!`, // Display product name in the message
+      `${product.name} has been added to the cart!`, 
       'Ok!', 
       {
         verticalPosition: 'bottom',
         horizontalPosition: 'start',
         duration: 2000,
-        panelClass: ['custom-snackbar'] // Apply the custom CSS class here
+        panelClass: ['custom-snackbar'] 
       }
     );
   }

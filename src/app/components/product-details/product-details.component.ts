@@ -17,13 +17,13 @@ export class ProductDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Retrieve the product ID from the route
+    
     const productId = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProductById(productId).subscribe(product => {
       this.product = product;
     });
   }
   goBack(): void {
-    this.location.back(); // Navigate back to the previous page
+    this.location.back(); 
   }
 }
