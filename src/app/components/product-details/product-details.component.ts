@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/product.service';
 import { Product } from 'src/app/product.model';
 import { Location } from '@angular/common';
+import { CartService } from 'src/app/cart.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -13,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService,private location: Location
+    private productService: ProductService,private location: Location,private cartService: CartService, private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +27,20 @@ export class ProductDetailsComponent implements OnInit {
   }
   goBack(): void {
     this.location.back(); 
+  }
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  
+    this._snackBar.open(
+      `${product.name} has been added to the cart!`, 
+      'Ok!', 
+      {
+        verticalPosition: 'bottom',
+        horizontalPosition: 'start',
+        duration: 2000,
+        panelClass: ['custom-snackbar'] 
+      }
+    );
   }
 }

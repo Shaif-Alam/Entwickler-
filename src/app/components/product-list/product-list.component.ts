@@ -14,9 +14,9 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
   searchQuery = '';
   selectedCategory = '';
-  pageSize = 12; // Number of products per page
-  currentPage = 1; // Current page
-  totalPages = 1; // Total number of pages
+  pageSize = 12;
+  currentPage = 1;
+  totalPages = 1; 
 
   constructor(private productService: ProductService, private cartService: CartService, private _snackBar: MatSnackBar) {}
 
