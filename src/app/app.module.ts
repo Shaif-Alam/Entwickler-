@@ -8,28 +8,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
-import { CartComponent } from './components/cart/cart.component';
 import { HeaderComponent } from './components/header/header.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductCardComponent,
-    CartComponent,
     HeaderComponent,
-    ProductDetailsComponent,
-    NotFoundComponent,
-
-
+    NotFoundComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

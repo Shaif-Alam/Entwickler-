@@ -1,20 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product.model';
+import { BehaviorSubject, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
  
+  private cartCount = new BehaviorSubject(0)
   private cartItems: { product: Product; quantity: number }[] = []; 
 
+  get totalItem(){
+    return this.cartCount.asObservable()
+  }
 
   addToCart(product: Product): void {
     let existingProduct = this.cartItems.find(item => item.product.id === product.id);
     if (existingProduct) {
       existingProduct.quantity += 1; 
     } else {
-      this.cartItems.push({ product, quantity: 1 }); 
+      this.cartItems.push({ product, quantity: 1 });
+      this.cartCount.next(this.cartItems.length)
     }
   }
 
@@ -24,6 +30,7 @@ export class CartService {
 
   removeFromCart(productId: number): void {
     this.cartItems = this.cartItems.filter(item => item.product.id !== productId);
+    this.cartCount.next(this.cartItems.length)
   }
 
 
