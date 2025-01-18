@@ -1,0 +1,55 @@
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-details {
+    padding: 0 15px;
+  }
+}
+
+
+img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+
+/* img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+   */
+
+.btn-add-card {
+  background-color: rgb(156, 110, 1);
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0%;
+}
+
+.cate {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
+.product_name {
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+  text-transform: capitalize;
+
+}
