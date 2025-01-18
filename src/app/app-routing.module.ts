@@ -7,8 +7,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: ProductListComponent },  
-  { path: 'cart', component: CartComponent },   
-  { path: 'product/:id', component: ProductDetailsComponent },  
+  { path: 'cart', loadChildren:()=>import('./components/cart/cart.module').then((m)=>m.CartModule) },   
+  { path: 'product/:id', loadChildren:()=>import('./components/product-details/product-details.module').then(m=>m.ProductDetailsModule) },  
   { path: '**', component:NotFoundComponent },  
   { path: 'home', component: ProductListComponent },  
 ];

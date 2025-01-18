@@ -19,7 +19,12 @@
           <mat-icon class="text-white">shopping_cart</mat-icon>
         </div>
 
-        <div class="text-white pb-1">Cart</div>
+        <div class="text-white pb-1">
+          Cart 
+          <ng-template [ngIf]="(totalItems|async) !=0">
+            <span class="badge bg-secondary">{{totalItems|async}}</span>
+          </ng-template>
+        </div>
       </div>
     </div>
 
