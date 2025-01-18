@@ -1,27 +1,68 @@
-# ECart
+Entwickler
+This project is an e-commerce application developed with Angular. It provides functionalities to display products, view details, add items to the cart, and more.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+Project Structure
+The project is structured as follows:
 
-## Development server
+src/: Contains the source code for the Angular application.
+src/app/: Contains the main Angular components, services, and modules.
+src/assets/: Contains assets like images and other static files.
+e2e/: Contains end-to-end test scripts.
+README.md: Project documentation.
+Getting Started
+Prerequisites
+Make sure you have the following installed:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Node.js (v16 or above)
+Angular CLI (v15.2.10 or above)
+Install Dependencies
+To get started, clone the repository and install the required dependencies:
 
-## Code scaffolding
+git clone [repository-link](https://github.com/Shaif-Alam/Entwickler-.git)
+cd e-cart
+npm install
+Running the Application Locally
+To run the application locally, use the following command:
+ng serve
+The application will be hosted at http://localhost:4200/ by default. If you open this URL in your browser, you should see the application running. It will automatically reload if you make changes to the source code.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Build the Application
+To build the project for production, use the following command:
 
-## Build
+bash
+Copy
+Edit
+ng build --prod
+This will generate the build files in the dist/ folder.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Testing
+Unit Testing
+Unit tests have been implemented using Karma and Jasmine. To run unit tests, use:
 
-## Running unit tests
+ng test
+This will run the unit tests in the browser and show the results in the console.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Test Cases Implemented
+Component Tests: Tests for individual components (e.g., ProductListComponent, CartComponent) to check the rendering and behavior of UI elements.
+Service Tests: Tests for services like ProductService and CartService to ensure data fetching and cart management functionalities are working correctly.
+Pipe Tests: Tests for custom pipes like CurrencyPipe to ensure they correctly format data.
+Directive Tests: Tests for custom directives to verify functionality.
+End-to-End Testing
+End-to-end tests are implemented using Protractor for simulating user interactions and verifying application flow.
 
-## Running end-to-end tests
+To run end-to-end tests:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ng e2e
+Before running end-to-end tests, install Protractor if it's not already installed:
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm install protractor --save-dev
+End-to-End Test Cases Implemented
+Navigation Tests: Ensures users can navigate between different pages like product listings, product details, and the shopping cart.
+Add to Cart Test: Verifies that users can add items to the cart successfully.
+Checkout Flow: Simulates a checkout process to confirm that the flow works as expected.
+Contributing
+If you'd like to contribute to this project, please fork the repository and submit a pull request with the proposed changes. Make sure to include tests for any new features.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
