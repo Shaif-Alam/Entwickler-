@@ -3,6 +3,7 @@ import { ProductService } from 'src/app/product.service';
 import { CartService } from 'src/app/cart.service';
 import { Product } from 'src/app/product.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -17,10 +18,11 @@ export class ProductListComponent implements OnInit {
   pageSize = 12;
   currentPage = 1;
   totalPages = 1; 
-
+  totalItems: Observable<number> = of(0);
   constructor(private productService: ProductService, private cartService: CartService, private _snackBar: MatSnackBar) {}
 
   ngOnInit() {
+    this.totalItems = this.cartService.totalItem
     this.productService.getProducts().subscribe(data => {
       this.products = data;
       this.filteredProducts = data; // Ensure that data is assigned to both arrays
